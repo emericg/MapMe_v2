@@ -1,0 +1,35 @@
+< README MapMe >
+< version 0.02 >
+
+
+DEPENDENCIES
+============
+CMake
+Gcc
+SFML >= 2
+Boost
+
+
+COMPILATION
+===========
+You will need CMake and GCC to build "MapMe".
+$ cd build/
+$ cmake ..
+$ make
+# make install
+
+
+INSTALLATION
+============
+Put the "MapMe" folder anywhere you want!
+
+
+UTILIZATION
+===========
+Launch "MapMe" or "MapMe.exe", depending on your operating system.
+
+
+LICENCES
+========
+Sourcecode is licensed under GPLv3
+Graphics are under a lot of different licenses right now...
