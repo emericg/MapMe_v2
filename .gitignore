@@ -1,2 +1,14 @@
+# MapMe executable
+MapMe
+
+# IDE temporary files
+CMakeLists.txt.user
+
+# CMake generated builds
 build/*
+
+# CMake generated files
+src/options.h
+
+# Doxygen generated documentation
 doc/html/*
