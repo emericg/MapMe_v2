@@ -1,0 +1,45 @@
+# French translations for MapMe.
+# Copyright (C) 2011 Emeric Grange <emeric.grange@gmail.com>
+# This file is distributed under the same license as MapMe.
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: Emeric Grange <emeric.grange@gmail.com>\n"
+"POT-Creation-Date: 2011-02-12 12:45+0100\n"
+"PO-Revision-Date: 2011-02-12 12:51+0100\n"
+"Last-Translator: Emeric Grange <emeric.grange@gmail.com>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../screenMenu.cpp:156
+msgid "Do you really want to close the game ?"
+msgstr "Voulez-vous vraiment quitter le jeu ?"
+
+#: ../screenMenu.cpp:87
+msgid "EXIT"
+msgstr "QUITTER"
+
+#: ../screenMenu.cpp:85
+msgid "MULTI PLAYERS"
+msgstr "MULTI JOUEURS"
+
+#: ../gui.cpp:234
+msgid "NO"
+msgstr "NON"
+
+#: ../screenMenu.cpp:86
+msgid "OPTIONS"
+msgstr "OPTIONS"
+
+#: ../screenMenu.cpp:84
+msgid "SINGLE PLAYER"
+msgstr "SIMPLE JOUEUR"
+
+#: ../gui.cpp:226
+msgid "YES"
+msgstr "OUI"
+

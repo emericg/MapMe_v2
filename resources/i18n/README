@@ -1,0 +1,14 @@
+## Translation procedure
+
+# Produce a .pot template file, which contains a list of all the translatable strings
+# extracted from the sources code.
+xgettext -d MapMe -s -o resources/i18n/mapme.pot src/*.cpp
+
+# Derive a .po file from the template using the msginit program.
+msginit --locale=fr --input=resources/i18n/mapme.pot
+
+# Copy the file into the appropriate folder
+cp fr.mo resources/i18n/fr/mapme.mo
+
+# Copy the file into the system (unix system)
+cp fr.mo /usr/share/locale/fr/LC_MESSAGES/mapme.mo
