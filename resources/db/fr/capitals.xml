@@ -5,236 +5,236 @@
 <!-- http://en.wikipedia.org/wiki/List_of_multiple_capital -->
 
 <database>
-	<infos id="capitals" language="fr" version="1.0" />
+    <infos id="capitals" language="fr" version="1.0" />
 
-	<level1>
-		<capital name="Paris" country="France" coordinates="48*51'N 2*21'E" population="2181371/2006" />
-		<capital name="Bruxelles" country="Belgique" coordinates="50*50'N 04*21'E" />
-		<capital name="Londres" country="Royaume-Uni" coordinates="51*30'N 00*07'E" />
-		<capital name="Amsterdam" country="Pays-Bas" coordinates="52*22'N 04*53'E" />
-		<capital name="Madrid" country="Espagne" coordinates="40*26'N 03*41'W" />
-		<capital name="Washington DC" country="USA" coordinates="38*53'N 77*02'W" />
-		<capital name="Pékin" country="Chine" coordinates="39*54'N 116*23'E" />
-		<capital name="Moscou" country="Russie" coordinates="55*45'N 37*37'E" />
-		<capital name="Rome" country="Italie" coordinates="41*54'N 12*30'E" />
-		<capital name="Berne" country="Suisse" coordinates="46*57'N 07*25'E" />
-		<capital name="Mexico" country="Mexique" coordinates="19*24'N 99*07'W" />
-		<capital name="Séoul" country="Corée du Sud" coordinates="37*26'N 127*07'E" />
-		<capital name="Tunis" country="Tunisie" coordinates="36*49'N 10*11'E" />
-		<capital name="Lisbonne" country="Portugal" coordinates="38*43'N 09*10'W" />
-		<capital name="Berlin" country="Allemagne" coordinates="52*31'N 13*24'E" />
-		<capital name="Tōkyō" country="Japon" coordinates="35*40'N 139*45'E" />
-		<capital name="Athènes" country="Grèce" coordinates="37*58'N 23*43'E" />
-		<capital name="Bagdad" country="Irak" coordinates="33*20'N 44*26'E" />
-		<capital name="Belgrade" country="Serbie" coordinates="43*49'N 20*28'E" />
-		<capital name="Le Caire" country="Égypte" coordinates="30*06'N 31*00'E" population="81713517/2008" />
-		<capital name="Copenhague" country="Danemark" coordinates="55*41'N 12*35'E" />
-		<capital name="Helsinki" country="Finlande" coordinates="60*10'N 24*57'E" />
-	</level1>
+    <level1>
+        <capital name="Paris" country="France" coordinates="48*51'N 2*21'E" population="2181371/2006" />
+        <capital name="Bruxelles" country="Belgique" coordinates="50*50'N 04*21'E" />
+        <capital name="Londres" country="Royaume-Uni" coordinates="51*30'N 00*07'E" />
+        <capital name="Amsterdam" country="Pays-Bas" coordinates="52*22'N 04*53'E" />
+        <capital name="Madrid" country="Espagne" coordinates="40*26'N 03*41'W" />
+        <capital name="Washington DC" country="USA" coordinates="38*53'N 77*02'W" />
+        <capital name="Pékin" country="Chine" coordinates="39*54'N 116*23'E" />
+        <capital name="Moscou" country="Russie" coordinates="55*45'N 37*37'E" />
+        <capital name="Rome" country="Italie" coordinates="41*54'N 12*30'E" />
+        <capital name="Berne" country="Suisse" coordinates="46*57'N 07*25'E" />
+        <capital name="Mexico" country="Mexique" coordinates="19*24'N 99*07'W" />
+        <capital name="Séoul" country="Corée du Sud" coordinates="37*26'N 127*07'E" />
+        <capital name="Tunis" country="Tunisie" coordinates="36*49'N 10*11'E" />
+        <capital name="Lisbonne" country="Portugal" coordinates="38*43'N 09*10'W" />
+        <capital name="Berlin" country="Allemagne" coordinates="52*31'N 13*24'E" />
+        <capital name="Tōkyō" country="Japon" coordinates="35*40'N 139*45'E" />
+        <capital name="Athènes" country="Grèce" coordinates="37*58'N 23*43'E" />
+        <capital name="Bagdad" country="Irak" coordinates="33*20'N 44*26'E" />
+        <capital name="Belgrade" country="Serbie" coordinates="43*49'N 20*28'E" />
+        <capital name="Le Caire" country="Égypte" coordinates="30*06'N 31*00'E" population="81713517/2008" />
+        <capital name="Copenhague" country="Danemark" coordinates="55*41'N 12*35'E" />
+        <capital name="Helsinki" country="Finlande" coordinates="60*10'N 24*57'E" />
+    </level1>
 
-	<level2>
-		<capital name="Canberra" country="Australie" coordinates="35*18'S 149*08'E" />
-		<capital name="Ottawa" country="Canada" coordinates="45*30'N 75*40'W" />
-		<capital name="Kiev" country="Ukraine" coordinates="50*27'N 30*30'E" />
-		<capital name="Alger" country="Algérie" coordinates="36*46'N 03*03'E" />
-		<capital name="Brasilia" country="Brésil" coordinates="15*30'S 47*51'W" />
-		<capital name="New Delhi" country="Inde" coordinates="28*37'N 77*14'E" />
-		<capital name="Rabat" country="Maroc" coordinates="34*01'N 06*50'W" />
-		<capital name="Oslo" country="Norvège" coordinates="59*54'N 10*44'E" />
-		<capital name="Stockholm" country="Suède" coordinates="59*21'N 18*04'E" />
-		<capital name="La Havane" country="Cuba" coordinates="23*10'N 82*21'W" />
-		<capital name="Ankara" country="Turquie" coordinates="40*07'N 32*59'E" />
-		<capital name="Luxembourg" country="Luxembourg" coordinates="49*45'N 06*10'E" />
-		<capital name="Buenos Aires" country="Argentine" coordinates="34*38'S 58*26'W" />
-		<capital name="Pretoria" country="Afrique du Sud" type="administrative" coordinates="25*55'S 28*13'E" />
-		<capital name="Le Cap" country="Afrique du Sud" type="législative" coordinates="33*55'S 18*22'E" />
-		<capital name="Bloemfontein " country="Afrique du Sud" type="judiciaire" coordinates="29*06'S 26*13'E" />
-		<capital name="Dublin" country="Irlande" coordinates="53*20'N 06*15'W" />
-		<capital name="Andorre-la-Vieille" country="Andorre" coordinates="42*30'N 1*31'E" />
-		<capital name="Bangkok" country="Thaïlande" coordinates="13*45'N 100*30'E" />
-		<capital name="Beyrouth" country="Liban" coordinates="33*53'N 35*30'E" />
-		<capital name="Bogotá" country="Colombie" coordinates="4*39'N 74*3'W" />
-		<capital name="Caracas" country="Venezuela" coordinates="10*30'N 66*54'W" />
-		<capital name="Hanoi" country="Viêt Nam" coordinates="21*2'N 105*51'E" />
-		<capital name="Bucarest" country="Roumanie" coordinates="44*25'N 26*06'E" />
-	</level2>
+    <level2>
+        <capital name="Canberra" country="Australie" coordinates="35*18'S 149*08'E" />
+        <capital name="Ottawa" country="Canada" coordinates="45*30'N 75*40'W" />
+        <capital name="Kiev" country="Ukraine" coordinates="50*27'N 30*30'E" />
+        <capital name="Alger" country="Algérie" coordinates="36*46'N 03*03'E" />
+        <capital name="Brasilia" country="Brésil" coordinates="15*30'S 47*51'W" />
+        <capital name="New Delhi" country="Inde" coordinates="28*37'N 77*14'E" />
+        <capital name="Rabat" country="Maroc" coordinates="34*01'N 06*50'W" />
+        <capital name="Oslo" country="Norvège" coordinates="59*54'N 10*44'E" />
+        <capital name="Stockholm" country="Suède" coordinates="59*21'N 18*04'E" />
+        <capital name="La Havane" country="Cuba" coordinates="23*10'N 82*21'W" />
+        <capital name="Ankara" country="Turquie" coordinates="40*07'N 32*59'E" />
+        <capital name="Luxembourg" country="Luxembourg" coordinates="49*45'N 06*10'E" />
+        <capital name="Buenos Aires" country="Argentine" coordinates="34*38'S 58*26'W" />
+        <capital name="Pretoria" country="Afrique du Sud" type="administrative" coordinates="25*55'S 28*13'E" />
+        <capital name="Le Cap" country="Afrique du Sud" type="législative" coordinates="33*55'S 18*22'E" />
+        <capital name="Bloemfontein " country="Afrique du Sud" type="judiciaire" coordinates="29*06'S 26*13'E" />
+        <capital name="Dublin" country="Irlande" coordinates="53*20'N 06*15'W" />
+        <capital name="Andorre-la-Vieille" country="Andorre" coordinates="42*30'N 1*31'E" />
+        <capital name="Bangkok" country="Thaïlande" coordinates="13*45'N 100*30'E" />
+        <capital name="Beyrouth" country="Liban" coordinates="33*53'N 35*30'E" />
+        <capital name="Bogotá" country="Colombie" coordinates="4*39'N 74*3'W" />
+        <capital name="Caracas" country="Venezuela" coordinates="10*30'N 66*54'W" />
+        <capital name="Hanoi" country="Viêt Nam" coordinates="21*2'N 105*51'E" />
+        <capital name="Bucarest" country="Roumanie" coordinates="44*25'N 26*06'E" />
+    </level2>
 
-	<level3>
-		<capital name="Nassau" country="Bahamas" coordinates="25*4'N 77*20'W" />
-		<capital name="Minsk" country="Biélorussie" coordinates="53*55'N 27*33'E" />
-		<capital name="Abidjan" country="Côte d'Ivoire" type="économique" coordinates="5*20'N 4*1'W" />
-		<capital name="Abou Dhabi" country="Emirats Arabes Unis" coordinates="24*27'N 52*22'E" />
-		<capital name="Budapest" country="Hongrie" coordinates="47*29'N 19*02'E" />
-		<capital name="Dakar" country="Senegal" coordinates="14*43'N 17*28'W" />
-		<capital name="Jakarta" country="Indonésie" coordinates="06*16'S 106*48'E" />
-		<capital name="Bratislava" country="Slovaquie" coordinates="48*08'N 17*06'E" />
-		<capital name="Riyad" country="Arabie Saoudite" coordinates="24*43'N 46*43'E" />
-		<capital name="Téhéran" country="Iran" coordinates="35*40'N 51*25'E" />
-		<capital name="Dubai" country="EAU" coordinates="25*16'N 55*19'E" />
-		<capital name="Pyongyang" country="Coree du Nord" coordinates="39*02'N 125*47'E" />
-		<capital name="Prague" country="République tchèque" coordinates="50*06'N 14*15'E" />
-		<capital name="Astana" country="Kazakhstan" coordinates="51*10'N 71*30'E" />
-		<capital name="Nairobi" country="Kenya" coordinates="06*16'S 36*49'E" />
-		<capital name="Damas" country="Syrie" coordinates="33*30'N 36*17'E" />
-		<capital name="Kathmandou" country="Népal" coordinates="27*43'N 85*22'E" />
-		<capital name="Abuja" country="Nigeria" coordinates="9*5'N 7*32'E" />
-		<capital name="Accra" country="Ghana" coordinates="5*33'N 0*12'W" />
-		<capital name="Amman" country="Jordanie" coordinates="31*57'N 35*56'E" />
-		<capital name="Asunción" country="Paraguay" coordinates="25*17'S 57*38'W" />
-		<capital name="Bakou" country="Azerbaidjan" coordinates="40*23'N 49*52'E" />
-		<capital name="Bamako" country="Mali" coordinates="12*38'N 7*59'W" />
-		<capital name="Brazzaville" country="Congo" coordinates="4*16'S 15*17'E" />
-		<capital name="Ljubljana" country="Slovénie" coordinates="46*3'N 14*30'E" />
-		<capital name="Delap-Uliga-Darrit" country="Îles Marshall" coordinates="7*4'N 171*16'E" />
-	</level3>
+    <level3>
+        <capital name="Nassau" country="Bahamas" coordinates="25*4'N 77*20'W" />
+        <capital name="Minsk" country="Biélorussie" coordinates="53*55'N 27*33'E" />
+        <capital name="Abidjan" country="Côte d'Ivoire" type="économique" coordinates="5*20'N 4*1'W" />
+        <capital name="Abou Dhabi" country="Emirats Arabes Unis" coordinates="24*27'N 52*22'E" />
+        <capital name="Budapest" country="Hongrie" coordinates="47*29'N 19*02'E" />
+        <capital name="Dakar" country="Senegal" coordinates="14*43'N 17*28'W" />
+        <capital name="Jakarta" country="Indonésie" coordinates="06*16'S 106*48'E" />
+        <capital name="Bratislava" country="Slovaquie" coordinates="48*08'N 17*06'E" />
+        <capital name="Riyad" country="Arabie Saoudite" coordinates="24*43'N 46*43'E" />
+        <capital name="Téhéran" country="Iran" coordinates="35*40'N 51*25'E" />
+        <capital name="Dubai" country="EAU" coordinates="25*16'N 55*19'E" />
+        <capital name="Pyongyang" country="Coree du Nord" coordinates="39*02'N 125*47'E" />
+        <capital name="Prague" country="République tchèque" coordinates="50*06'N 14*15'E" />
+        <capital name="Astana" country="Kazakhstan" coordinates="51*10'N 71*30'E" />
+        <capital name="Nairobi" country="Kenya" coordinates="06*16'S 36*49'E" />
+        <capital name="Damas" country="Syrie" coordinates="33*30'N 36*17'E" />
+        <capital name="Kathmandou" country="Népal" coordinates="27*43'N 85*22'E" />
+        <capital name="Abuja" country="Nigeria" coordinates="9*5'N 7*32'E" />
+        <capital name="Accra" country="Ghana" coordinates="5*33'N 0*12'W" />
+        <capital name="Amman" country="Jordanie" coordinates="31*57'N 35*56'E" />
+        <capital name="Asunción" country="Paraguay" coordinates="25*17'S 57*38'W" />
+        <capital name="Bakou" country="Azerbaidjan" coordinates="40*23'N 49*52'E" />
+        <capital name="Bamako" country="Mali" coordinates="12*38'N 7*59'W" />
+        <capital name="Brazzaville" country="Congo" coordinates="4*16'S 15*17'E" />
+        <capital name="Ljubljana" country="Slovénie" coordinates="46*3'N 14*30'E" />
+        <capital name="Delap-Uliga-Darrit" country="Îles Marshall" coordinates="7*4'N 171*16'E" />
+    </level3>
 
-	<level4>
-		<capital name="Vienne" country="Autriche" coordinates="48*12'N 16*21'E" />
-		<capital name="Varsovie" country="Pologne" coordinates="52*13'N 21*2'E" />
-		<capital name="Tel Aviv-Jaffa" country="Israël" coordinates="32*2'N 34*46'E" />
-		<capital name="Santiago du Chili" country="Chili" coordinates="33*27'S 70*41'W" />
-		<capital name="San José" country="Costa Rica" coordinates="9*56'N 84*05'W" />
-		<capital name="Rīga" country="Lettonie" coordinates="56*58'N 24*8'E" />
-		<capital name="Reykjavík" country="Islande" coordinates="64*4'N 21*56'W" />
-		<capital name="Pyongyang" country="Corée du Nord" coordinates="39*1'N 125*44'E" />
-		<capital name="Panamá" country="Panamá" coordinates="8*58'N 79*32'W" />
-		<capital name="Lima" country="Péru" coordinates="12*2'S 77*1'W" />
-		<capital name="Kuala Lumpur" country="Malaisie" coordinates="3*8'N 101*42'E" />
-		<capital name="Kaboul" country="Afghanistan" coordinates="34*31'N 69*9'E" />
-		<capital name="Khartoum" country="Soudan" coordinates="15*36'N 32*32'E" />
-		<capital name="Nouakchott" country="Mauritanie" coordinates="18*6'N 15*57'W" />
-		<capital name="Tripoli" country="Libye" coordinates="32*54'N 13*11'E" />
-		<capital name="Bujumbura" country="Burundi" coordinates="03*22'S 29*19'E" />
-		<capital name="Montevideo" country="Uruguay" coordinates="34*49'S 56*27'W" />
-		<capital name="Dhâkâ" country="Bangladesh" coordinates="23*46'N 90*23'E" />
-		<capital name="Oulan Bator" country="Mongolie" coordinates="47*56'N 106*59'E" />
-		<capital name="Wellington" country="Nouvelle-Zélande" coordinates="41*17'S 174*46'E" />
-		<capital name="Tashkent" country="Ouzbékistan" coordinates="41*16'N 69*13'E" />
-		<capital name="Phnom Penh" country="Cambodge" coordinates="11*35'N 104*55'E" />
-		<capital name="Kigali" country="Rwanda" coordinates="01*58'S 30*07'E" />
-		<capital name="Achgabat" country="Turkménistan" coordinates="37*58'N 58*20'E" />
-		<capital name="Addis-Abeba" country="Éthiopie" coordinates="9*02'N 38*44'E" />
-	</level4>
+    <level4>
+        <capital name="Vienne" country="Autriche" coordinates="48*12'N 16*21'E" />
+        <capital name="Varsovie" country="Pologne" coordinates="52*13'N 21*2'E" />
+        <capital name="Tel Aviv-Jaffa" country="Israël" coordinates="32*2'N 34*46'E" />
+        <capital name="Santiago du Chili" country="Chili" coordinates="33*27'S 70*41'W" />
+        <capital name="San José" country="Costa Rica" coordinates="9*56'N 84*05'W" />
+        <capital name="Rīga" country="Lettonie" coordinates="56*58'N 24*8'E" />
+        <capital name="Reykjavík" country="Islande" coordinates="64*4'N 21*56'W" />
+        <capital name="Pyongyang" country="Corée du Nord" coordinates="39*1'N 125*44'E" />
+        <capital name="Panamá" country="Panamá" coordinates="8*58'N 79*32'W" />
+        <capital name="Lima" country="Péru" coordinates="12*2'S 77*1'W" />
+        <capital name="Kuala Lumpur" country="Malaisie" coordinates="3*8'N 101*42'E" />
+        <capital name="Kaboul" country="Afghanistan" coordinates="34*31'N 69*9'E" />
+        <capital name="Khartoum" country="Soudan" coordinates="15*36'N 32*32'E" />
+        <capital name="Nouakchott" country="Mauritanie" coordinates="18*6'N 15*57'W" />
+        <capital name="Tripoli" country="Libye" coordinates="32*54'N 13*11'E" />
+        <capital name="Bujumbura" country="Burundi" coordinates="03*22'S 29*19'E" />
+        <capital name="Montevideo" country="Uruguay" coordinates="34*49'S 56*27'W" />
+        <capital name="Dhâkâ" country="Bangladesh" coordinates="23*46'N 90*23'E" />
+        <capital name="Oulan Bator" country="Mongolie" coordinates="47*56'N 106*59'E" />
+        <capital name="Wellington" country="Nouvelle-Zélande" coordinates="41*17'S 174*46'E" />
+        <capital name="Tashkent" country="Ouzbékistan" coordinates="41*16'N 69*13'E" />
+        <capital name="Phnom Penh" country="Cambodge" coordinates="11*35'N 104*55'E" />
+        <capital name="Kigali" country="Rwanda" coordinates="01*58'S 30*07'E" />
+        <capital name="Achgabat" country="Turkménistan" coordinates="37*58'N 58*20'E" />
+        <capital name="Addis-Abeba" country="Éthiopie" coordinates="9*02'N 38*44'E" />
+    </level4>
 
-	<level5>
-		<capital name="Zagreb" country="Croatie" coordinates="45*48'N 15*58'E" />
-		<capital name="Vilnius" country="Lituanie" coordinates="55*30'N 37*20'E" />
-		<capital name="Vaduz" country="Principauté de Liechtenstein" coordinates="47*8'N 9*30'E" />
-		<capital name="Tirana" country="Albanie" coordinates="41*19'N 19*49'E" />
-		<capital name="Tbilissi" country="Géorgie" coordinates="41*43'N 44*48'E" />
-		<capital name="Singapour" country="Singapour" coordinates="1*17'N 103*51'E" />
-		<capital name="Sanaa" country="République du Yémen" coordinates="15*21'N 44*12'E" />
-		<capital name="Port-au-Prince" country="Haïti" coordinates="18*32'N 72*20'W" />
-		<capital name="La Paz" country="Bolivie" type="administrative" coordinates="16*30'S 68*09'W" />
-		<capital name="Sucre" country="Bolivie"  type="constitutionnelle" coordinates="19*2'S 65*15'W" />
-		<capital name="Nicosie" country="Chypre" coordinates="35*10'N 33*21'E" />
-		<capital name="Kingston" country="Jamaïque" coordinates="17*58'N 76*48'W" />
-		<capital name="Islamabad" country="Pakistan" coordinates="33*43'N 73*04'E" />
-		<capital name="Yaoundé" country="Cameroun" coordinates="3*52'N 11*31'E" />
-		<capital name="Chisinau" country="Moldavie" coordinates="47*01'N 28*52'E" />
-		<capital name="Bichkek" country="Kirghizistan" coordinates="42*52'N 74*34'E" />
-		<capital name="Kinshasa" country="République démocratique du Congo" coordinates="4*24'S 15*24'E" />
-		<capital name="Tananarive" country="Madagascar" coordinates="18*48'S 47*29'E" />
-		<capital name="Colombo" country="Sri Lanka" type="économique" coordinates="6*55'N 79*50'E" />
-		<capital name="Bangui" country="République Centrafricaine" coordinates="4*21'N 18*33'E" />
-		<capital name="Freetown" country="Sierra Leone" coordinates="8*30'N 13*7'W" />
-		<capital name="Djibouti" country="Djibouti" coordinates="11*36'N 43*10'E" />
-		<capital name="Tallinn" country="Estonie" coordinates="59*26'N 24*45'E" />
-	</level5>
+    <level5>
+        <capital name="Zagreb" country="Croatie" coordinates="45*48'N 15*58'E" />
+        <capital name="Vilnius" country="Lituanie" coordinates="55*30'N 37*20'E" />
+        <capital name="Vaduz" country="Principauté de Liechtenstein" coordinates="47*8'N 9*30'E" />
+        <capital name="Tirana" country="Albanie" coordinates="41*19'N 19*49'E" />
+        <capital name="Tbilissi" country="Géorgie" coordinates="41*43'N 44*48'E" />
+        <capital name="Singapour" country="Singapour" coordinates="1*17'N 103*51'E" />
+        <capital name="Sanaa" country="République du Yémen" coordinates="15*21'N 44*12'E" />
+        <capital name="Port-au-Prince" country="Haïti" coordinates="18*32'N 72*20'W" />
+        <capital name="La Paz" country="Bolivie" type="administrative" coordinates="16*30'S 68*09'W" />
+        <capital name="Sucre" country="Bolivie"  type="constitutionnelle" coordinates="19*2'S 65*15'W" />
+        <capital name="Nicosie" country="Chypre" coordinates="35*10'N 33*21'E" />
+        <capital name="Kingston" country="Jamaïque" coordinates="17*58'N 76*48'W" />
+        <capital name="Islamabad" country="Pakistan" coordinates="33*43'N 73*04'E" />
+        <capital name="Yaoundé" country="Cameroun" coordinates="3*52'N 11*31'E" />
+        <capital name="Chisinau" country="Moldavie" coordinates="47*01'N 28*52'E" />
+        <capital name="Bichkek" country="Kirghizistan" coordinates="42*52'N 74*34'E" />
+        <capital name="Kinshasa" country="République démocratique du Congo" coordinates="4*24'S 15*24'E" />
+        <capital name="Tananarive" country="Madagascar" coordinates="18*48'S 47*29'E" />
+        <capital name="Colombo" country="Sri Lanka" type="économique" coordinates="6*55'N 79*50'E" />
+        <capital name="Bangui" country="République Centrafricaine" coordinates="4*21'N 18*33'E" />
+        <capital name="Freetown" country="Sierra Leone" coordinates="8*30'N 13*7'W" />
+        <capital name="Djibouti" country="Djibouti" coordinates="11*36'N 43*10'E" />
+        <capital name="Tallinn" country="Estonie" coordinates="59*26'N 24*45'E" />
+    </level5>
 
-	<level6>
-		<capital name="La Valette" country="Malte" coordinates="35*54'N 14*31'E" />
-		<capital name="Skopje" country="Macédoine" coordinates="42*0'N 21*26'E" />
-		<capital name="Moroni" country="Comores" coordinates="11*45'S 43*12'E" />
-		<capital name="Maseru" country="Lesotho" coordinates="29*18'S 27*28'E" />
-		<capital name="Harare" country="Zimbabwe" coordinates="17*49'S 31*03'E" />
-		<capital name="Maputo" country="Mozambique" coordinates="25*58'S 32*35'E" />
-		<capital name="Port-Louis" country="Maurice" coordinates="20*10'S 57*31'E" />
-		<capital name="Porto-Novo" country="Bénin" type="officielle" coordinates="6*29'N 2*36'E" />
-		<capital name="Ouagadougou" country="Burkina Faso" coordinates="12*21'N 1*31'W" />
-		<capital name="Praia" country="Cap-Vert" coordinates="14*55'N 23*31'W" />
-		<capital name="Yamoussoukro" country="Côte d'Ivoire" type="politique et administrative" coordinates="6*49'N 5*17'W" />
-		<capital name="Kampala" country="Ouganda" coordinates="0*19'N 32*35'E" />
-		<capital name="Ville de Manille" country="Philippines" coordinates="14*35'N 120*58'E" />
-		<capital name="Victoria" country="Seychelles" coordinates="4*37'S 55*27'E" />
-		<capital name="Mogadiscio" country="Somalie" coordinates="2*2'N 45*21'E" />
-		<capital name="Douala" country="Cameroun" type="économique" coordinates="4*3'N 9*42'E" />
-		<capital name="Georgetown" country="Guyana" coordinates="6*48'N 58*10'W﻿" />
-		<capital name="Managua" country="Nicaragua" coordinates="12*09'N 86*16'W" />
-		<capital name="Koweït" country="Koweït" coordinates="29*22'N 47*58'E" />
-		<capital name="Malé" country="Maldives" coordinates="4*10'N 73*30'E" />
-		<capital name="Bissau" country="Guinée Bissau" coordinates="11*52'N 15*36'W" />
-		<capital name="Bridgetown" country="Barbade" coordinates="13*7'N 59*37'W" />
-		<capital name="Suva" country="Îles Fidji" coordinates="18*10'S 178*27'E" />
-		<capital name="Tegucigalpa" country="Honduras" coordinates="14*05'N 87*14'W" />
-		<capital name="Mascate" country="Oman" coordinates="23*36'N 58*35'E" />
-	</level6>
-	
-	<level7>
-		<capital name="Ville de Manille" country="Philippines" coordinates="14*35'N 120*58'E" />
-		<capital name="Thimphou" country="Bhoutan" coordinates="27*29'N 89*40'E" />
-		<capital name="Sri Jayawardenapura" country="Sri Lanka" type="politique" coordinates="6*54'N 79*53'E" />
-		<capital name="Sarajevo" country="Bosnie-Herzégovine" coordinates="55*30'N 37*20'E" />
-		<capital name="San Salvador" country="Salvador" coordinates="13*40'N 89*10'W" />
-		<capital name="Quito" country="Équateur" coordinates="00*15'S 78*35'W" />
-		<capital name="Paramaribo" country="Suriname" coordinates="5*49'N 55*9'W" />
-		<capital name="N'Djamena" country="Tchad" coordinates="12*110'N 15*50'E" />
-		<capital name="São Tomé" country="Sao Tomé-et-Principe" coordinates="0*20'N 6*44'E" />
-		<capital name="Malabo" country="Guinée équatoriale" coordinates="3*45'N 8*47'E" />
-		<capital name="Libreville" country="Gabon" coordinates="0*30'N 9*25'E" />
-		<capital name="Luanda" country="Angola" coordinates="8*50'S 13*14'E" />
-		<capital name="Honiara" country="Îles Salomon" coordinates="9*28'S 159*49'W" />
-		<capital name="Niamey" country="Niger" coordinates="13*31'N 02*26'E" />
-		<capital name="Erevan" country="Arménie" coordinates="40*18'N 44*51'E" />
-		<capital name="Apia" country="Samoa" coordinates="13*50'S 171*50'W" />
-		<capital name="Gaborone" country="Botswana" coordinates="24*40'S 25*55'E" />
-	</level7>
+    <level6>
+        <capital name="La Valette" country="Malte" coordinates="35*54'N 14*31'E" />
+        <capital name="Skopje" country="Macédoine" coordinates="42*0'N 21*26'E" />
+        <capital name="Moroni" country="Comores" coordinates="11*45'S 43*12'E" />
+        <capital name="Maseru" country="Lesotho" coordinates="29*18'S 27*28'E" />
+        <capital name="Harare" country="Zimbabwe" coordinates="17*49'S 31*03'E" />
+        <capital name="Maputo" country="Mozambique" coordinates="25*58'S 32*35'E" />
+        <capital name="Port-Louis" country="Maurice" coordinates="20*10'S 57*31'E" />
+        <capital name="Porto-Novo" country="Bénin" type="officielle" coordinates="6*29'N 2*36'E" />
+        <capital name="Ouagadougou" country="Burkina Faso" coordinates="12*21'N 1*31'W" />
+        <capital name="Praia" country="Cap-Vert" coordinates="14*55'N 23*31'W" />
+        <capital name="Yamoussoukro" country="Côte d'Ivoire" type="politique et administrative" coordinates="6*49'N 5*17'W" />
+        <capital name="Kampala" country="Ouganda" coordinates="0*19'N 32*35'E" />
+        <capital name="Ville de Manille" country="Philippines" coordinates="14*35'N 120*58'E" />
+        <capital name="Victoria" country="Seychelles" coordinates="4*37'S 55*27'E" />
+        <capital name="Mogadiscio" country="Somalie" coordinates="2*2'N 45*21'E" />
+        <capital name="Douala" country="Cameroun" type="économique" coordinates="4*3'N 9*42'E" />
+        <capital name="Georgetown" country="Guyana" coordinates="6*48'N 58*10'W﻿" />
+        <capital name="Managua" country="Nicaragua" coordinates="12*09'N 86*16'W" />
+        <capital name="Koweït" country="Koweït" coordinates="29*22'N 47*58'E" />
+        <capital name="Malé" country="Maldives" coordinates="4*10'N 73*30'E" />
+        <capital name="Bissau" country="Guinée Bissau" coordinates="11*52'N 15*36'W" />
+        <capital name="Bridgetown" country="Barbade" coordinates="13*7'N 59*37'W" />
+        <capital name="Suva" country="Îles Fidji" coordinates="18*10'S 178*27'E" />
+        <capital name="Tegucigalpa" country="Honduras" coordinates="14*05'N 87*14'W" />
+        <capital name="Mascate" country="Oman" coordinates="23*36'N 58*35'E" />
+    </level6>
+    
+    <level7>
+        <capital name="Ville de Manille" country="Philippines" coordinates="14*35'N 120*58'E" />
+        <capital name="Thimphou" country="Bhoutan" coordinates="27*29'N 89*40'E" />
+        <capital name="Sri Jayawardenapura" country="Sri Lanka" type="politique" coordinates="6*54'N 79*53'E" />
+        <capital name="Sarajevo" country="Bosnie-Herzégovine" coordinates="55*30'N 37*20'E" />
+        <capital name="San Salvador" country="Salvador" coordinates="13*40'N 89*10'W" />
+        <capital name="Quito" country="Équateur" coordinates="00*15'S 78*35'W" />
+        <capital name="Paramaribo" country="Suriname" coordinates="5*49'N 55*9'W" />
+        <capital name="N'Djamena" country="Tchad" coordinates="12*110'N 15*50'E" />
+        <capital name="São Tomé" country="Sao Tomé-et-Principe" coordinates="0*20'N 6*44'E" />
+        <capital name="Malabo" country="Guinée équatoriale" coordinates="3*45'N 8*47'E" />
+        <capital name="Libreville" country="Gabon" coordinates="0*30'N 9*25'E" />
+        <capital name="Luanda" country="Angola" coordinates="8*50'S 13*14'E" />
+        <capital name="Honiara" country="Îles Salomon" coordinates="9*28'S 159*49'W" />
+        <capital name="Niamey" country="Niger" coordinates="13*31'N 02*26'E" />
+        <capital name="Erevan" country="Arménie" coordinates="40*18'N 44*51'E" />
+        <capital name="Apia" country="Samoa" coordinates="13*50'S 171*50'W" />
+        <capital name="Gaborone" country="Botswana" coordinates="24*40'S 25*55'E" />
+    </level7>
 
-	<level8>
-		<capital name="Monrovia" country="Libéria" coordinates="6*19'N 10*46'W" />
-		<capital name="Port Moresby" country="Papouasie-Nouvelle-Guinée" coordinates="9*28'S 147*12'E" />
-		<capital name="Vientiane" country="Laos" coordinates="17*58'N 102*35'E" />
-		<capital name="Castries" country="Sainte-Lucie" coordinates="14*1'N 60*59'W" />
-		<capital name="Saint-Marin" country="République sérénissime de Saint-Marin" coordinates="43*56'N 12*26'E" />
-		<capital name="Saint-Domingue" country="République dominicaine" coordinates="18*30'N 69*59'W" />
-		<capital name="Saint George's" country="Grenade" coordinates="12*03'N 61*45'W" />
-		<capital name="Roseau" country="Dominique" coordinates="15*18'N 61*21'E" />
-		<capital name="Port-d'Espagne" country="Trinité-et-Tobago" coordinates="10*39'N 61*31'W" />
-		<capital name="Podgorica" country="Monténégro" coordinates="42*47'N 19*28'E" />
-		<capital name="Port-Vila" country="Vanuatu" coordinates="17*27'S 168*11'E" />
-		<capital name="Belmopan" country="Bélize" coordinates="17*15'N 88*46'W" />
-		<capital name="Dodoma" country="Tanzanie" coordinates="06*52'S 39*12'E" />
-		<capital name="Manama" country="Bahreïn" coordinates="26*16'N 50*39'E" />
-		<capital name="Doha" country="Qatar" coordinates="25*17'N 51*34'E" />
-		<capital name="Kingstown" country="Saint-Vincent-et-les Grenadines" coordinates="13*10'N 61*14'W" />
-	</level8>
+    <level8>
+        <capital name="Monrovia" country="Libéria" coordinates="6*19'N 10*46'W" />
+        <capital name="Port Moresby" country="Papouasie-Nouvelle-Guinée" coordinates="9*28'S 147*12'E" />
+        <capital name="Vientiane" country="Laos" coordinates="17*58'N 102*35'E" />
+        <capital name="Castries" country="Sainte-Lucie" coordinates="14*1'N 60*59'W" />
+        <capital name="Saint-Marin" country="République sérénissime de Saint-Marin" coordinates="43*56'N 12*26'E" />
+        <capital name="Saint-Domingue" country="République dominicaine" coordinates="18*30'N 69*59'W" />
+        <capital name="Saint George's" country="Grenade" coordinates="12*03'N 61*45'W" />
+        <capital name="Roseau" country="Dominique" coordinates="15*18'N 61*21'E" />
+        <capital name="Port-d'Espagne" country="Trinité-et-Tobago" coordinates="10*39'N 61*31'W" />
+        <capital name="Podgorica" country="Monténégro" coordinates="42*47'N 19*28'E" />
+        <capital name="Port-Vila" country="Vanuatu" coordinates="17*27'S 168*11'E" />
+        <capital name="Belmopan" country="Bélize" coordinates="17*15'N 88*46'W" />
+        <capital name="Dodoma" country="Tanzanie" coordinates="06*52'S 39*12'E" />
+        <capital name="Manama" country="Bahreïn" coordinates="26*16'N 50*39'E" />
+        <capital name="Doha" country="Qatar" coordinates="25*17'N 51*34'E" />
+        <capital name="Kingstown" country="Saint-Vincent-et-les Grenadines" coordinates="13*10'N 61*14'W" />
+    </level8>
 
-	<level9>
-		<capital name="Mbabane" country="Swaziland" coordinates="26*19'S 31*08'E" />
-		<capital name="Lusaka" country="Zambie" coordinates="15*25'S 28*17'E" />
-		<capital name="Lomé" country="Togo" coordinates="6*7'N 1*13'E" />
-		<capital name="Lilongwe" country="Malawi" coordinates="13*59'S 33*47'E" />
-		<capital name="Saint John's" country="Antigua-et-Barbuda" coordinates="17*7'N 61*50'W" />
-		<capital name="Nuku'alofa" country="Tonga" coordinates="21*6'S 174*0'W" />
-		<capital name="Palikir" country="Micronésie" coordinates="6*55'N 158*9'E" />
-		<capital name="Melekeok" country="Palaos" coordinates="7*29'N 134*38'E" />
-		<capital name="Yaren" country="République de Nauru" coordinates="0*32'S 166*55'E" />
-		<capital name="Tarawa" country="Kiribati" coordinates="1*25'N 173*2'E" />
-		<capital name="Bandar Seri Begawan" country="Brunei" coordinates="4*55'N 114*55'E" />
-		<capital name="Banjul" country="Gambie" coordinates="13*28'N 16*36'W" />
-		<capital name="Windhoek" country="Nambie" coordinates="22*33'S 17*4'E" />
-	</level9>
+    <level9>
+        <capital name="Mbabane" country="Swaziland" coordinates="26*19'S 31*08'E" />
+        <capital name="Lusaka" country="Zambie" coordinates="15*25'S 28*17'E" />
+        <capital name="Lomé" country="Togo" coordinates="6*7'N 1*13'E" />
+        <capital name="Lilongwe" country="Malawi" coordinates="13*59'S 33*47'E" />
+        <capital name="Saint John's" country="Antigua-et-Barbuda" coordinates="17*7'N 61*50'W" />
+        <capital name="Nuku'alofa" country="Tonga" coordinates="21*6'S 174*0'W" />
+        <capital name="Palikir" country="Micronésie" coordinates="6*55'N 158*9'E" />
+        <capital name="Melekeok" country="Palaos" coordinates="7*29'N 134*38'E" />
+        <capital name="Yaren" country="République de Nauru" coordinates="0*32'S 166*55'E" />
+        <capital name="Tarawa" country="Kiribati" coordinates="1*25'N 173*2'E" />
+        <capital name="Bandar Seri Begawan" country="Brunei" coordinates="4*55'N 114*55'E" />
+        <capital name="Banjul" country="Gambie" coordinates="13*28'N 16*36'W" />
+        <capital name="Windhoek" country="Nambie" coordinates="22*33'S 17*4'E" />
+    </level9>
 
-	<level10>
-		<capital name="Basseterre" country="Saint-Christophe-et-Niévès" coordinates="17*18'N 62*44'W" />
-		<capital name="Naypyidaw" country="Myanmar" coordinates="19*45'N 96*6'E" />
-		<capital name="Asmara" country="Erythrée" coordinates="15*20'N 38*55'E" />
-		<capital name="Funafuti" country="Tuvalu" coordinates="8*31'S 179*13'E" />
-		<capital name="Conakry" country="Guinée" coordinates="9*31'N 13*42'W" />
-		<capital name="Cotonou" country="Bénin" type="économique" coordinates="6*21'N 2*26'E" />
-		<capital name="Ciudad de Guatemala" country="Guatemala" coordinates="14*38'N 90*33'EW" />
-		<capital name="Delap-Uliga-Darrit" country="Îles Marschall" coordinates="7*4'N 171*16'E" />
-		<capital name="Dili" country="Timor Oriental" coordinates="8*33'S 125*34'E" />
-		<capital name="Douchanbé" country="Tadjikistan" coordinates="38*33'N 68*48'E" />
-	</level10>
+    <level10>
+        <capital name="Basseterre" country="Saint-Christophe-et-Niévès" coordinates="17*18'N 62*44'W" />
+        <capital name="Naypyidaw" country="Myanmar" coordinates="19*45'N 96*6'E" />
+        <capital name="Asmara" country="Erythrée" coordinates="15*20'N 38*55'E" />
+        <capital name="Funafuti" country="Tuvalu" coordinates="8*31'S 179*13'E" />
+        <capital name="Conakry" country="Guinée" coordinates="9*31'N 13*42'W" />
+        <capital name="Cotonou" country="Bénin" type="économique" coordinates="6*21'N 2*26'E" />
+        <capital name="Ciudad de Guatemala" country="Guatemala" coordinates="14*38'N 90*33'EW" />
+        <capital name="Delap-Uliga-Darrit" country="Îles Marschall" coordinates="7*4'N 171*16'E" />
+        <capital name="Dili" country="Timor Oriental" coordinates="8*33'S 125*34'E" />
+        <capital name="Douchanbé" country="Tadjikistan" coordinates="38*33'N 68*48'E" />
+    </level10>
 </database>

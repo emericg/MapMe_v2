@@ -4,9 +4,9 @@
 <!-- http://en.wikipedia.org/wiki/List_of_sovereign_states -->
 
 <database>
-	<infos id="countries" language="fr" version="1.0" />
+    <infos id="countries" language="fr" version="1.0" />
 
-	<level1>
-		<country name="France" color="" population="65073482/21/2009" area="675417/41" idh="0.995/11/2006" />
-	</level1>
+    <level1>
+        <country name="France" color="" population="65073482/21/2009" area="675417/41" idh="0.995/11/2006" />
+    </level1>
 </database>

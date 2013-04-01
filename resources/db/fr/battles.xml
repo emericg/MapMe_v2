@@ -4,37 +4,38 @@
 <!-- http://en.wikipedia.org/wiki/List_of_battles -->
 
 <database>
-	<infos id="battles" language="fr" version="1.0" />
-	
-	<categorie name="Les batailles célèbres">
-		<battle name="" war="" coordinates="" date="" casualties="" />
-	</categorie>
-	
-	<categorie name="Les batailles aériennes célèbres">
-		<battle name="bataille de Neuve Chapelle" war="1ere guerre mondiale" coordinates="" date="mars 1915" casualties="" />
-		<battle name="opération Bodenplatte" war="2eme guerre mondiale" coordinates="" date="1945" casualties="" />
-		<battle name="bataille de Normandie" war="2eme guerre mondiale" coordinates="" date="1944" casualties="" />
-		<battle name="bataille de France" war="2eme guerre mondiale" coordinates="" date="" casualties="" />
-		<battle name="bataille d'Angleterre" war="2eme guerre mondiale" coordinates="" date="" casualties="" />
-		<battle name="bataille de Midway" war="2eme guerre mondiale" coordinates="" date="1942" casualties="" />
-		<battle name="attaque sur Pearl Harbor" war="2eme guerre mondiale" coordinates="" date="décembre 1941" casualties="" />
-		<battle name="raid de Doolittle" war="2eme guerre mondiale" coordinates="" date="1942" casualties="" />
-		<battle name="bataille de Tarente" war="2eme guerre mondiale" coordinates="" date="1940" casualties="" />
-		<battle name="bataille de la Mer de Corail" war="2eme guerre mondiale" coordinates="" date="1942" casualties="" />
-		<battle name="bataille du golfe de Leyte" war="2eme guerre mondiale" coordinates="" date="1944" casualties="" />
-		<battle name="opération Desert Storm" war="Guerre du golfe" coordinates="" date="1991" casualties="" />
-		<battle name="Mig Alley" war="Guerre de Corée" coordinates="" date="" casualties="" />
-	</categorie>
-	
-	<categorie name="Les batailles navales célèbres">
-		<battle name="" war="" coordinates="" date="" casualties="" />
-	</categorie>
-	
-	<categorie name="1ere guerre mondiale">
-		<battle name="" war="" coordinates="" date="" casualties="" />
-	</categorie>
-	
-	<categorie name="2eme guerre mondiale">
-		<battle name="Bataille de Guadalcanal" war="2eme guerre mondiale" coordinates="" date="" casualties="" />
-		<battle name="" war="" coordinates="" date="" casualties="" />
-	</categorie>
+    <infos id="battles" language="fr" version="1.0" />
+
+    <categorie name="Les batailles célèbres">
+        <battle name="" war="" coordinates="" date="" casualties="" />
+    </categorie>
+
+    <categorie name="Les batailles aériennes célèbres">
+        <battle name="bataille de Neuve Chapelle" war="1ere guerre mondiale" coordinates="" date="mars 1915" casualties="" />
+        <battle name="opération Bodenplatte" war="2eme guerre mondiale" coordinates="" date="1945" casualties="" />
+        <battle name="bataille de Normandie" war="2eme guerre mondiale" coordinates="" date="1944" casualties="" />
+        <battle name="bataille de France" war="2eme guerre mondiale" coordinates="" date="" casualties="" />
+        <battle name="bataille d'Angleterre" war="2eme guerre mondiale" coordinates="" date="" casualties="" />
+        <battle name="bataille de Midway" war="2eme guerre mondiale" coordinates="" date="1942" casualties="" />
+        <battle name="attaque sur Pearl Harbor" war="2eme guerre mondiale" coordinates="" date="décembre 1941" casualties="" />
+        <battle name="raid de Doolittle" war="2eme guerre mondiale" coordinates="" date="1942" casualties="" />
+        <battle name="bataille de Tarente" war="2eme guerre mondiale" coordinates="" date="1940" casualties="" />
+        <battle name="bataille de la Mer de Corail" war="2eme guerre mondiale" coordinates="" date="1942" casualties="" />
+        <battle name="bataille du golfe de Leyte" war="2eme guerre mondiale" coordinates="" date="1944" casualties="" />
+        <battle name="opération Desert Storm" war="Guerre du golfe" coordinates="" date="1991" casualties="" />
+        <battle name="Mig Alley" war="Guerre de Corée" coordinates="" date="" casualties="" />
+    </categorie>
+
+    <categorie name="Les batailles navales célèbres">
+        <battle name="" war="" coordinates="" date="" casualties="" />
+    </categorie>
+
+    <categorie name="1ere guerre mondiale">
+        <battle name="" war="" coordinates="" date="" casualties="" />
+    </categorie>
+
+    <categorie name="2eme guerre mondiale">
+        <battle name="Bataille de Guadalcanal" war="2eme guerre mondiale" coordinates="" date="" casualties="" />
+        <battle name="" war="" coordinates="" date="" casualties="" />
+    </categorie>
+</database>
