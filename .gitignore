@@ -8,7 +8,7 @@ CMakeLists.txt.user
 build/*
 
 # CMake generated files
-src/options.h
+src/cmake_options.h
 
 # Doxygen generated documentation
 doc/html/*
