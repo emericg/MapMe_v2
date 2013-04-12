@@ -29,84 +29,193 @@
 /* ************************************************************************** */
 
 /*!
- * \fn screenGame()
  * \brief screenGame constructor.
  */
 screenGame::screenGame()
 {
-    //
+    std::cout << "screenGame::screenGame" << std::endl;
 }
 
 /*!
- * \fn Run(sf::RenderWindow &App)
+ * screenGame destructor.
+ */
+screenGame::~screenGame()
+{
+    std::cout << "screenGame::~screenGame" << std::endl;
+
+    delete cBlack;
+    delete cWhite;
+    delete cGrey;
+
+    delete gameMapSprite;
+    delete gameMapTexture;
+
+    delete guiConf;
+}
+
+/*!
+ * \brief Load static resources needed for the main menu.
+ */
+bool screenGame::load(sf::RenderWindow &App)
+{
+    std::cout << "screenGame::load" << std::endl;
+    float resRatio = (App.getSize().y / 1080.0);
+
+    // Colors
+    cBlack = new sf::Color(0, 0, 0, 127);
+    cWhite = new sf::Color(255, 255, 255, 255);
+    cGrey = new sf::Color(255, 255, 255, 127);
+
+    // Menu background map
+    gameMapTexture = new sf::Texture();
+    if( !gameMapTexture->loadFromFile("resources/gfx/maps/worldmap_full_1080.png") )
+    {
+        std::cerr << "[error] Loading 'worldmap_full_1080.png' failed!" << std::endl;
+        return FAILURE;
+    }
+
+    gameMapSprite = new sf::Sprite();
+    gameMapSprite->setTexture(*gameMapTexture);
+    gameMapSprite->setPosition(0, 0);
+
+    // Resize background to match window size
+    if( resRatio != 1 || ((App.getSize().x/App.getSize().y) != 16.0/9.0) )
+    {
+        gameMapSprite->setScale(resRatio, resRatio);
+/*
+        // Handle differents screen aspect ratio ?
+        if( (App.getSize().x/App.getSize().y) != 16.0/9.0 )
+        {
+            int x1 = (App.getSize().x - gameMapSprite->getTextureRect().width)/2;
+            gameMapSprite->setPosition(x1, 0);
+        }
+*/
+    }
+
+    // Confirmation window
+    guiConf = new guiConfirmation(gettext("Do you really want to close the game ?"));
+    guiConf->guiLoad();
+
+    return SUCCESS;
+}
+
+/*!
  * \brief screenGame pipeline.
  * \param App The render window.
  * \return true if rendering succeed, false otherwise.
  */
-int screenGame::Run(sf::RenderWindow &App)
+int screenGame::run(sf::RenderWindow &App)
 {
-    std::cout << "screenGame::Run" << std::endl;
-/*
-    // Load map
-    sf::Image *mapIMG;
-    mapIMG = new sf::Image();
-    if (!mapIMG->loadFromFile("resources/gfx/maps/worldmap_full_1080.png"))
-    {
-        std::cerr << "[error] Loading worldmap_full_1080" << std::endl;
-        return false;
-    }
-    mapSprite = new sf::Sprite();
-    mapSprite->SetImage(*mapIMG);
-    mapSprite->SetScale(0.666f, 0.666f);
-
-    // Events
+    std::cout << "screenGame::run" << std::endl;
+    bool exitconfirmation = false;
+    bool running = true;
     sf::Event Event;
-    bool Running= true;
 
     // Notifications
     NotificationManager &NotificationManager = NotificationManager::getInstance();
+    NotificationManager.add("Let's go !", NOTIF_ERROR);
 
     // Game Loop
-    while (Running)
+    while( running )
     {
-        // Process events
-        while (App.GetEvent(Event))
-        {
-            if (Event.Type == sf::Event::Closed)
-            {
-                return (-1);
-            }
+        // Clear screen
+        App.clear();
 
-            if (Event.Type == sf::Event::KeyPressed)
+        // Drawing (1/2)
+        App.draw(*gameMapSprite);
+
+        // Process confirmation events
+        if( exitconfirmation )
+        {
+            while( App.pollEvent(Event) )
             {
-                switch (Event.Key.Code)
+                int confirmcode = guiConf->guiExec(Event);
+
+                if( confirmcode == 1 )
+                    exitconfirmation = false;
+                else if( confirmcode == 2 )
+                    return -1;
+            }
+        }
+        else
+        {
+            // Process menu events
+            while( App.pollEvent(Event) )
+            {
+                if( Event.type == sf::Event::Closed )
                 {
-                    case sf::Key::Escape:
-                        // Goto (0) menu screen
-                        delete mapSprite;
-                        delete mapIMG;
-                        return (0);
+                    exitconfirmation = !exitconfirmation;
+                    break;
+                }
+                /*
+                if( sf::Mouse::isButtonPressed(sf::Mouse::Left) )
+                {
+                    for( int i = 0; i < menuTable.size(); i++ )
+                    {
+                        if( menuTable[i]->getGlobalBounds().contains(Event.mouseMove.x, Event.mouseMove.y) )
+                        {
+                            if( i == 0 )
+                            {
+                                // Goto (1) game screen
+                                return (1);
+                            }
+                            else if( i == (menuTable.size() - 1) )
+                            {
+                                exitconfirmation != exitconfirmation;
+                                break;
+                            }
+                        }
+                    }
+                }
+*/
+                if( Event.type == sf::Event::MouseMoved )
+                {
+                    // Event.mouseMove.x
+                    // contains the current X position of the mouse cursor, in local coordinates
+
+                    // Event.mouseMove.y
+                    // contains the current Y position of the mouse cursor, in local coordinates
+                }
+
+                if( Event.type == sf::Event::KeyPressed )
+                {
+                    switch( Event.key.code )
+                    {
+                        case sf::Keyboard::Q:
+                            return -1;
                         break;
-                    case sf::Key::Q:
-                        return (-1);
+
+                        case sf::Keyboard::Escape:
+                            if( exitconfirmation)
+                                exitconfirmation = false;
+                            else
+                                exitconfirmation = true;
                         break;
-                    default:
+
+                        default:
                         break;
+                    }
                 }
             }
         }
 
-        // Drawing
-        App.Clear();
-        App.draw(*mapSprite);
+        // Drawing (2/2)
+        if( exitconfirmation )
+        {
+            //App.draw(*effectBlur);
+            guiConf->guiDraw(App);
+        }
+
+        //guiE->guiDraw(App);
+        //mguiMenu->guiDraw(App);
 
         // Notifications
         NotificationManager.update();
-        NotificationManager.draw();
+        NotificationManager.draw(App);
 
         // Display
-        App.Display();
+        App.display();
     }
-*/
-    return (-1);
+
+    return 1;
 }

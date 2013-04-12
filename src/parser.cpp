@@ -119,6 +119,8 @@ bool Parser::dbCheck()
 bool Parser::dbParse(element *elements[], short nb, short lv)
 {
     std::cout << "Parser::dbParse" << std::endl;
+
+    return false;
 }
 
 /*!

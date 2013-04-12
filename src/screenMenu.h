@@ -28,6 +28,9 @@
 #define SCREENMENU_H
 /* ************************************************************************** */
 
+// C++ standard library
+#include <iostream>
+
 // Local file(s)
 #include "gui.h"
 #include "managers/ScreenManager.hpp"
@@ -63,8 +66,8 @@ public:
     screenMenu();
     ~screenMenu();
 
-    bool Load(sf::RenderWindow &App);
-    virtual int Run(sf::RenderWindow &App);
+    virtual bool load(sf::RenderWindow &App);
+    virtual int run(sf::RenderWindow &App);
 };
 
 /* ************************************************************************** */

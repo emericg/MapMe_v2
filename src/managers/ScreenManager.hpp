@@ -45,7 +45,8 @@
 class Screens
 {
 public:
-    virtual int Run(sf::RenderWindow &App) = 0;
+    virtual bool load(sf::RenderWindow &App) = 0;
+    virtual int run(sf::RenderWindow &App) = 0;
 };
 
 /* ************************************************************************** */

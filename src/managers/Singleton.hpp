@@ -51,7 +51,7 @@ public:
      */
     static T & getInstance()
     {
-        if (!Inst)
+        if( !Inst )
         {
             Inst = new T;
         }

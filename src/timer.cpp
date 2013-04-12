@@ -142,7 +142,7 @@ const unsigned Timer::getElapsedTime()
 
 /*!
  * \brief Return Timer global state.
- * \return true if Timer is started, else false.
+ * \return true if Timer is started, false otherwise.
  */
 const bool Timer::isStarted()
 {
@@ -151,7 +151,7 @@ const bool Timer::isStarted()
 
 /*!
  * \brief Return Timer pause state.
- * \return true if Timer is paused, else false.
+ * \return true if Timer is paused, false otherwise.
  */
 const bool Timer::isPaused()
 {

@@ -59,7 +59,7 @@ private:
     Timer ntimer;
 
 public:
-    Notification(std::string message, notif_type_e type, uint32_t lifespan_ms);
+    Notification(const std::string message, const notif_type_e type, const uint32_t lifespan_ms);
     ~Notification();
 
     bool isTimeElapsed();

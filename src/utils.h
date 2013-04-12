@@ -17,9 +17,7 @@
 
 /*!
  * \file utils.h
- * \brief Various utilities.
- *
- * Functions to perform various tasks on strings.
+ * \brief Various helpers.
  */
 
 #ifndef UTILS_H
@@ -34,10 +32,10 @@
 /* ************************************************************************** */
 
 template<typename T>
-std::string toString(const T & Value);
+bool toString(const T & source, std::string & dest);
 
 template<typename T>
-bool fromString(const std::string & Str, T & Dest);
+bool fromString(const std::string & source, T & dest);
 
 std::string trim(const std::string & s);
 

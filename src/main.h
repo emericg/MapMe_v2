@@ -21,7 +21,7 @@
  * \author Emeric GRANGE <emeric.grange@gmail.com>
  * \date 2012
  *
- * Start the program, initialize libraries and launch the main menu.
+ * Start the program, initialize various stuffs and launch the main menu.
  */
 
 #ifndef MAIN_H

@@ -436,6 +436,8 @@ bool guiConfirmation::guiLoad()
     sprBa = new sf::Sprite();
     sprBa->setTexture(*gui_blueangle);
     sprBa->setScale(display_resratio, display_resratio);
+
+    return true;
 }
 
 int guiConfirmation::guiExec(sf::Event& Event)
@@ -489,6 +491,9 @@ int guiConfirmation::guiExec(sf::Event& Event)
             case sf::Keyboard::Right:
                 txtButtonNo->setColor(*cBlack);
                 txtButtonYes->setColor(*cBlue);
+            break;
+
+            default:
             break;
         }
     }

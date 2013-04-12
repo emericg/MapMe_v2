@@ -45,7 +45,7 @@ NotificationManager::~NotificationManager()
 {
     std::cout << "NotificationManager::~NotificationManager" << std::endl;
 
-    for(int i = 0; i < notifications.size(); i++)
+    for( unsigned i = 0; i < notifications.size(); i++ )
     {
         if( notifications.at(i) )
         {
@@ -89,7 +89,7 @@ bool NotificationManager::add(std::string message, notif_type_e type, uint32_t l
  */
 void NotificationManager::update()
 {
-    for( int i = 0; i < notifications.size(); i++ )
+    for( unsigned i = 0; i < notifications.size(); i++ )
     {
         if( notifications.at(i) )
         {
@@ -108,7 +108,7 @@ void NotificationManager::update()
 void NotificationManager::draw(sf::RenderWindow &app)
 {
     // Draw notifications
-    for( int i = 0; i < notifications.size(); i++ )
+    for( unsigned i = 0; i < notifications.size(); i++ )
     {
         if( notifications.at(i) )
         {

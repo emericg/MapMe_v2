@@ -32,7 +32,7 @@
 /*!
  * \brief Notification constructor.
  */
-Notification::Notification(std::string message, notif_type_e type, uint32_t lifespan_ms)
+Notification::Notification(const std::string message, const notif_type_e type, const uint32_t lifespan_ms)
 {
     std::cout << "Notification::Notification" << std::endl;
 
@@ -44,35 +44,35 @@ Notification::Notification(std::string message, notif_type_e type, uint32_t life
     // Icon texture
     notif_icon_texture = new sf::Texture();
 
-    switch(type)
+    switch( type )
     {
-    default:
-    case NOTIF_INFO:
-        if (!notif_icon_texture->loadFromFile("resources/gfx/icons/dialog-information.png"))
+        default:
+        case NOTIF_INFO:
+        if( notif_icon_texture->loadFromFile("resources/gfx/icons/dialog-information.png") == false )
         {
             std::cerr << "[error] Loading 'dialog-information.png'" << std::endl;
             //return FAILURE;
         }
         break;
 
-    case NOTIF_QUESTION:
-        if (!notif_icon_texture->loadFromFile("resources/gfx/icons/dialog-question.png"))
+        case NOTIF_QUESTION:
+        if( notif_icon_texture->loadFromFile("resources/gfx/icons/dialog-question.png") == false )
         {
             std::cerr << "[error] Loading 'dialog-question.png'" << std::endl;
             //return FAILURE;
         }
         break;
 
-    case NOTIF_WARNING:
-        if (!notif_icon_texture->loadFromFile("resources/gfx/icons/dialog-warning.png"))
+        case NOTIF_WARNING:
+        if( notif_icon_texture->loadFromFile("resources/gfx/icons/dialog-warning.png") == false )
         {
             std::cerr << "[error] Loading 'dialog-warning.png'" << std::endl;
             //return FAILURE;
         }
         break;
 
-    case NOTIF_ERROR:
-        if (!notif_icon_texture->loadFromFile("resources/gfx/icons/dialog-error.png"))
+        case NOTIF_ERROR:
+        if( notif_icon_texture->loadFromFile("resources/gfx/icons/dialog-error.png") == false )
         {
             std::cerr << "[error] Loading 'dialog-error.png'" << std::endl;
             //return FAILURE;
@@ -89,12 +89,13 @@ Notification::Notification(std::string message, notif_type_e type, uint32_t life
     // Notification icon
     notif_icon = new sf::Sprite();
     notif_icon->setTexture(*notif_icon_texture);
-    notif_icon->setPosition(notif_background->getPosition().x + 8.0, notif_background->getPosition().y + 8.0);
+    notif_icon->setPosition(notif_background->getPosition().x + 8.0,
+                            notif_background->getPosition().y + 8.0);
     notif_icon->setScale(0.75, 0.75);
 
     // Notification font
     notif_message_font = new sf::Font();
-    if (!notif_message_font->loadFromFile("resources/fonts/DejaVuSans.ttf"))
+    if( notif_message_font->loadFromFile("resources/fonts/DejaVuSans.ttf") == false )
     {
         std::cerr << "[error] Loading 'DejaVuSans.ttf'" << std::endl;
         //return FAILURE;
@@ -103,7 +104,8 @@ Notification::Notification(std::string message, notif_type_e type, uint32_t life
     // Notification message
     notif_message = new sf::Text(message, *notif_message_font, 24);
     notif_message->setColor(sf::Color::Blue);
-    notif_message->setPosition(notif_icon->getPosition().x + notif_icon->getGlobalBounds().width + 8.0,  notif_icon->getPosition().y + 8.0);
+    notif_message->setPosition(notif_icon->getPosition().x + notif_icon->getGlobalBounds().width + 8.0,
+                               notif_icon->getPosition().y + 8.0);
 
     // Update notification background size
     rectangle_size = sf::Vector2f(notif_message->getGlobalBounds().width + 92, 64);
@@ -132,8 +134,9 @@ bool Notification::isTimeElapsed(void)
 {
     bool elapsed = false;
 
-    if (ntimer.getElapsedTime() > lifespan_ms)
+    if( ntimer.getElapsedTime() > lifespan_ms )
     {
+        std::cout << "[info] Notification timeout" << std::endl;
         elapsed = true;
     }
 

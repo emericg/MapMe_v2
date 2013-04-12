@@ -32,6 +32,7 @@
 #include <iostream>
 
 // Local file(s)
+#include "gui.h"
 #include "managers/ScreenManager.hpp"
 
 /* ************************************************************************** */
@@ -43,11 +44,20 @@
 class screenGame : public Screens
 {
 private:
-    sf::Sprite *mapSprite;
+    sf::Color *cBlack;
+    sf::Color *cWhite;
+    sf::Color *cGrey;
+
+    sf::Sprite *gameMapSprite;
+    sf::Texture *gameMapTexture;
+
+    guiConfirmation *guiConf;
 
 public:
     screenGame();
-    virtual int Run(sf::RenderWindow &App);
+    ~screenGame();
+    virtual bool load(sf::RenderWindow &App);
+    virtual int run(sf::RenderWindow &App);
 };
 
 /* ************************************************************************** */

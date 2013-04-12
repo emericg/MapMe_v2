@@ -27,6 +27,7 @@
 // Local file(s)
 #include "managers/ConfigurationManager.hpp"
 #include "managers/NotificationManager.hpp"
+#include "cmake_options.h"
 #include "screenMenu.h"
 #include "screenGame.h"
 #include "main.h"
@@ -117,6 +118,7 @@ int main(int argc, char **argv)
         std::cerr << "[info]  Fragment shaders are disabled." << std::endl;
     }
 
+#if ENABLE_DEBUG == 0
     // Splash Screen handling (fad-in)
     ////////////////////////////////////////////////////////////////////////////
 
@@ -147,6 +149,7 @@ int main(int argc, char **argv)
             splashClock = new sf::Clock;
         }
     }
+#endif // ENABLE_DEBUG
 
     // Internationalization
     ////////////////////////////////////////////////////////////////////////////
@@ -171,9 +174,15 @@ int main(int argc, char **argv)
     screenMenu s0;
     screenGame s1;
 
-    if (s0.Load(appWindow) != 1)
+    if( s0.load(appWindow) != 1 )
     {
         std::cerr << "[error] Main Menu loading." << std::endl;
+        return EXIT_FAILURE;
+    }
+
+    if( s1.load(appWindow) != 1 )
+    {
+        std::cerr << "[error] Game screen loading." << std::endl;
         return EXIT_FAILURE;
     }
 
@@ -181,19 +190,20 @@ int main(int argc, char **argv)
     vScreens.push_back(&s0);
     vScreens.push_back(&s1);
 
+#if ENABLE_DEBUG == 0
     // Splash Screen handling (fad-out)
     ////////////////////////////////////////////////////////////////////////////
 
-    if (ConfigurationManager.getSplashScreen() == true)
+    if( ConfigurationManager.getSplashScreen() == true )
     {
-        if (splashClock->getElapsedTime().asMilliseconds() < 1000)
+        if( splashClock->getElapsedTime().asMilliseconds() < 1000 )
         {
             unsigned int tts = (1000 - splashClock->getElapsedTime().asMilliseconds());
             usleep(tts);
         }
 
         int fadeout = 30;
-        while (fadeout > 0)
+        while( fadeout > 0 )
         {
             splashSprite->setColor(sf::Color(255, 255, 255, fadeout*8.5));
             appWindow.clear(sf::Color::Black);
@@ -202,33 +212,34 @@ int main(int argc, char **argv)
             fadeout--;
         }
 
-        if (splashTexture)
+        if( splashTexture )
         {
             delete splashTexture;
             splashTexture = NULL;
         }
 
-        if (splashSprite)
+        if( splashSprite )
         {
             delete splashSprite;
             splashSprite = NULL;
         }
 
-        if (splashClock)
+        if( splashClock )
         {
             delete splashClock;
             splashClock = NULL;
         }
     }
+#endif // ENABLE_DEBUG
 
     // Main loop
     ////////////////////////////////////////////////////////////////////////////
 
     std::cout << "[info] MapMe launched!" << std::endl;
     int screen = 0;
-    while (screen >= 0)
+    while( screen >= 0 )
     {
-        screen = vScreens[screen]->Run(appWindow);
+        screen = vScreens[screen]->run(appWindow);
     }
 
     // Exit sequence

@@ -5,9 +5,16 @@ cmake_minimum_required(VERSION 2.8)
 ###############################
 
 PROJECT(MapMe)
+
 SET(MapMe_VERSION_MAJOR 0)
 SET(MapMe_VERSION_MINOR 2)
 SET(MapMe_VERSION_PATCH 0)
+
+SET(ENABLE_DEBUG 1) # Toggle debug and trace output
+SET(ENABLE_COLORS 1) # Toggle colors in console output
+
+CONFIGURE_FILE("${CMAKE_SOURCE_DIR}/src/cmake_options.h.in"
+               "${CMAKE_SOURCE_DIR}/src/cmake_options.h")
 
 
 ## MapMe files & directories
@@ -25,14 +32,24 @@ SET(SOURCE_FILES
     src/tinyxml2/tinyxml2.cpp)
 
 
-## MapMe options
+## Software libraries
 ###############################
 
-OPTION(ENABLE_DEBUG "Toggle debug and trace output" ON)
-OPTION(ENABLE_COLORS "Toggle colors in console output" ON)
+FIND_PACKAGE(SFML 2 COMPONENTS system window graphics audio REQUIRED)
+FIND_PACKAGE(Boost COMPONENTS system filesystem thread REQUIRED)
+FIND_PACKAGE(Doxygen)
 
-CONFIGURE_FILE("${CMAKE_SOURCE_DIR}/src/cmake_options.h.in"
-               "${CMAKE_SOURCE_DIR}/src/cmake_options.h")
+IF(NOT SFML_FOUND)
+    message(FATAL_ERROR "SFML libraries not found!")
+ENDIF(NOT SFML_FOUND)
+
+IF(NOT Boost_FOUND)
+    message(FATAL_ERROR "Boost libraries not found!")
+ENDIF(NOT Boost_FOUND)
+
+IF(NOT DOXYGEN_FOUND)
+    message(ERROR "Doxygen not found!")
+ENDIF(NOT DOXYGEN_FOUND)
 
 
 ## Libraries options
@@ -43,26 +60,6 @@ SET(Boost_USE_STATIC_LIBS OFF)
 SET(Boost_USE_MULTITHREAD ON)
 
 
-## Software libraries
-###############################
-
-FIND_PACKAGE(SFML 2 COMPONENTS system window graphics audio REQUIRED)
-FIND_PACKAGE(Boost COMPONENTS system filesystem thread REQUIRED)
-FIND_PACKAGE(Doxygen)
-
-IF(NOT SFML_FOUND)
-    message (FATAL_ERROR "SFML libraries not found!")
-ENDIF(NOT SFML_FOUND)
-
-IF(NOT Boost_FOUND)
-    message (FATAL_ERROR "Boost libraries not found!")
-ENDIF(NOT Boost_FOUND)
-
-IF(NOT DOXYGEN_FOUND)
-    message ("Doxygen not found!")
-ENDIF(NOT DOXYGEN_FOUND)
-
-
 ## Build options
 ###############################
 
@@ -71,8 +68,8 @@ ENDIF(NOT DOXYGEN_FOUND)
 IF(ENABLE_DEBUG)
     MESSAGE(STATUS "This is a DEBUG build.")
     SET(CMAKE_BUILD_TYPE debug)
-    SET(CMAKE_C_FLAGS "-O0 -g")
-    SET(CMAKE_CXX_FLAGS "-O0 -g")
+    SET(CMAKE_C_FLAGS "-O0 -g -Wall")
+    SET(CMAKE_CXX_FLAGS "-O0 -g -Wall")
 ELSE(ENABLE_DEBUG)
     MESSAGE(STATUS "This is a RELEASE build.")
     SET(CMAKE_BUILD_TYPE release)
@@ -85,9 +82,7 @@ ENDIF(ENABLE_DEBUG)
 ###############################
 
 ADD_EXECUTABLE(MapMe ${SOURCE_FILES})
-
 INCLUDE_DIRECTORIES(${SFML_INCLUDE_DIR} ${Boost_INCLUDE_DIR})
-
 TARGET_LINK_LIBRARIES(MapMe ${SFML_LIBRARIES} ${Boost_LIBRARIES})
 
 

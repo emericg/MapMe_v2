@@ -35,7 +35,6 @@
 screenMenu::screenMenu()
 {
     std::cout << "screenMenu::screenMenu" << std::endl;
-
 }
 
 /*!
@@ -64,9 +63,9 @@ screenMenu::~screenMenu()
 /*!
  * \brief Load static resources needed for the main menu.
  */
-bool screenMenu::Load(sf::RenderWindow &App)
+bool screenMenu::load(sf::RenderWindow &App)
 {
-    std::cout << "screenMenu::Load" << std::endl;
+    std::cout << "screenMenu::load" << std::endl;
 
     float resRatio = (App.getSize().y / 720.0);
 
@@ -77,7 +76,7 @@ bool screenMenu::Load(sf::RenderWindow &App)
 
     // Menu background
     menuBackgroundTexture = new sf::Texture();
-    if (!menuBackgroundTexture->loadFromFile("resources/gfx/menu/background_720.png"))
+    if( !menuBackgroundTexture->loadFromFile("resources/gfx/menu/background_720.png") )
     {
         std::cerr << "[error] Loading 'background_720.png'" << std::endl;
         return FAILURE;
@@ -88,12 +87,12 @@ bool screenMenu::Load(sf::RenderWindow &App)
     menuBackground->setPosition(0, 0);
 
     // Resize background to match window size
-    if (resRatio != 1 || ((App.getSize().x/App.getSize().y) != 16.0/9.0))
+    if( resRatio != 1 || ((App.getSize().x/App.getSize().y) != 16.0/9.0) )
     {
         menuBackground->setScale(resRatio, resRatio);
 /*
         // Handle differents screen aspect ratio ?
-        if ((App.getSize().x/App.getSize().y) != 16.0/9.0)
+        if( (App.getSize().x/App.getSize().y) != 16.0/9.0)
         {
             int x1 = (App.getSize().x - menuBackground->getTextureRect().width)/2;
             menuBackground->setPosition(x, 0);
@@ -111,7 +110,7 @@ bool screenMenu::Load(sf::RenderWindow &App)
 
     // Font
     menuFont = new sf::Font();
-    if (!menuFont->loadFromFile("resources/fonts/DejaVuSans.ttf"))
+    if( !menuFont->loadFromFile("resources/fonts/DejaVuSans.ttf"))
     {
         std::cerr << "[error] Loading 'DejaVuSans.ttf'" << std::endl;
         return FAILURE;
@@ -128,7 +127,7 @@ bool screenMenu::Load(sf::RenderWindow &App)
     menuTable.push_back(Menu2);
     menuTable.push_back(Menu3);
     menuTable.push_back(Menu4);
-    for (int i = 0; i<menuTable.size(); i++)
+    for( int i = 0; i < (int)menuTable.size(); i++ )
     {
         menuTable[i]->setColor(*cGrey);
         menuTable[i]->setFont(*menuFont);
@@ -150,37 +149,36 @@ bool screenMenu::Load(sf::RenderWindow &App)
 /*
     // Blur shader
     effectBlur = new sf::Shader();
-    if (!effectBlur->loadFromFile("resources/shaders/blur.sfx", sf::Shader::Fragment))
+    if( !effectBlur->loadFromFile("resources/shaders/blur.sfx", sf::Shader::Fragment))
     {
         std::cerr << "[error] Loading 'blur.sfx'" << std::endl;
         return FAILURE;
     }
 */
-    return true;
+    return SUCCESS;
 }
 
 /*!
- * \fn Run(sf::RenderWindow &App)
  * \brief screenMenu pipeline.
  * \param App The render window.
  * \return docme.
  */
-int screenMenu::Run(sf::RenderWindow &App)
+int screenMenu::run(sf::RenderWindow &App)
 {
-    std::cout << "screenMenu::Run" << std::endl;
+    std::cout << "screenMenu::run" << std::endl;
+
     bool exitconfirmation = false;
+    bool running = true;
+    int currentMenu = 0;
+
+    sf::Event Event;
 
     // Notifications
     NotificationManager &NotificationManager = NotificationManager::getInstance();
     NotificationManager.add("Bienvenue dans MapMe !");
 
-    // Events
-    sf::Event Event;
-    bool Running = true;
-
     // Menu Loop
-    int menu = 0;
-    while (Running)
+    while( running )
     {
         // Clear screen
         App.clear();
@@ -195,123 +193,124 @@ int screenMenu::Run(sf::RenderWindow &App)
         App.draw(*Menu4);
 
         // Process confirmation events
-        if (exitconfirmation)
+        if( exitconfirmation )
         {
-            while (App.pollEvent(Event))
+            while( App.pollEvent(Event) )
             {
                 int confirmcode = guiConf->guiExec(Event);
 
-                if (confirmcode == 1)
+                if( confirmcode == 1 )
                     exitconfirmation = false;
-                else if (confirmcode == 2)
+                else if( confirmcode == 2 )
                     return (-1);
             }
         }
         else
         {
-        // Process menu events
-        while (App.pollEvent(Event))
-        {
-            if (Event.type == sf::Event::Closed)
+            // Process menu events
+            while( App.pollEvent(Event) )
             {
-                exitconfirmation != exitconfirmation;
-                break;
-            }
-
-            if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-            {
-                for (int i = 0; i < menuTable.size(); i++)
+                if( Event.type == sf::Event::Closed )
                 {
-                    if (menuTable[i]->getGlobalBounds().contains(Event.mouseMove.x, Event.mouseMove.y))
+                    exitconfirmation = !exitconfirmation;
+                    break;
+                }
+
+                if( sf::Mouse::isButtonPressed(sf::Mouse::Left) )
+                {
+                    for( unsigned i = 0; i < menuTable.size(); i++ )
                     {
-                        if (i == 0)
+                        if( menuTable[i]->getGlobalBounds().contains(Event.mouseMove.x, Event.mouseMove.y) )
                         {
-                            // Goto (1) game screen
-                            return (1);
-                        }
-                        else if (i == menuTable.size() - 1)
-                        {
-                            exitconfirmation != exitconfirmation;
-                            break;
+                            if( i == 0 )
+                            {
+                                // Goto (1) game screen
+                                return (1);
+                            }
+                            else if( i == (menuTable.size() - 1) )
+                            {
+                                exitconfirmation = !exitconfirmation;
+                                break;
+                            }
                         }
                     }
                 }
-            }
 
-            if (Event.type == sf::Event::MouseMoved)
-            {
-                // Event.mouseMove.x
-                // contains the current X position of the mouse cursor, in local coordinates
-
-                // Event.mouseMove.y
-                // contains the current Y position of the mouse cursor, in local coordinates
-
-                for (int i = 0; i < menuTable.size(); i++)
+                if( Event.type == sf::Event::MouseMoved )
                 {
-                    if (menuTable[i]->getGlobalBounds().contains(Event.mouseMove.x, Event.mouseMove.y))
+                    // Event.mouseMove.x
+                    // contains the current X position of the mouse cursor, in local coordinates
+
+                    // Event.mouseMove.y
+                    // contains the current Y position of the mouse cursor, in local coordinates
+
+                    for( unsigned i = 0; i < menuTable.size(); i++ )
                     {
-                        menuTable[menu]->setColor(*cGrey);
-                        menu = i;
-                        menuTable[menu]->setColor(*cWhite);
+                        if( menuTable[i]->getGlobalBounds().contains(Event.mouseMove.x, Event.mouseMove.y) )
+                        {
+                            menuTable[currentMenu]->setColor(*cGrey);
+                            currentMenu = i;
+                            menuTable[currentMenu]->setColor(*cWhite);
+                        }
                     }
                 }
-            }
 
-            if (Event.type == sf::Event::KeyPressed)
-            {
-                switch (Event.key.code)
+                if( Event.type == sf::Event::KeyPressed )
                 {
-                    case sf::Keyboard::Right:
-                        menuTable[menu]->setColor(*cGrey);
-                        menu++;
-                        if (menu == menuTable.size())
-                            menu = 0;
-                        if (menu == -1)
-                            menu = menuTable.size()-1;
-                        menuTable[menu]->setColor(*cWhite);
+                    switch( Event.key.code )
+                    {
+                        case sf::Keyboard::Right:
+                            menuTable[currentMenu]->setColor(*cGrey);
+                            currentMenu++;
+                            if( currentMenu == (int)menuTable.size() )
+                                currentMenu = 0;
+                            if( currentMenu == -1 )
+                                currentMenu = menuTable.size()-1;
+                            menuTable[currentMenu]->setColor(*cWhite);
                         break;
-                    case sf::Keyboard::Left:
-                        menuTable[menu]->setColor(*cGrey);
-                        menu--;
-                        if (menu == menuTable.size())
-                            menu = 0;
-                        if (menu == -1)
-                            menu = menuTable.size()-1;
-                        menuTable[menu]->setColor(*cWhite);
+                        case sf::Keyboard::Left:
+                            menuTable[currentMenu]->setColor(*cGrey);
+                            currentMenu--;
+                            if( currentMenu == (int)menuTable.size() )
+                                currentMenu = 0;
+                            if( currentMenu == -1)
+                                currentMenu = menuTable.size()-1;
+                            menuTable[currentMenu]->setColor(*cWhite);
                         break;
-                    case sf::Keyboard::Q:
-                        return (-1);
+                        case sf::Keyboard::Q:
+                            return -1;
                         break;
-                    case sf::Keyboard::Escape:
-                        if (exitconfirmation)
-                            exitconfirmation = false;
-                        else
-                            exitconfirmation = true;
-                        break;
-                    case sf::Keyboard::Return:
-                        if (menu == 0)
-                        {
-                            // Goto (1) game screen
-                            return (1);
-                        }
-                        else if (menu == menuTable.size()-1)
-                        {
-                            if (exitconfirmation)
+                        case sf::Keyboard::Escape:
+                            if( exitconfirmation )
                                 exitconfirmation = false;
                             else
                                 exitconfirmation = true;
-                            break;
-                        }
                         break;
-                    default:
+                        case sf::Keyboard::Return:
+                            if( currentMenu == 0 )
+                            {
+                                // Goto (1) game screen
+                                return (1);
+                            }
+                            else if( currentMenu == (int)(menuTable.size() - 1) )
+                            {
+                                if( exitconfirmation)
+                                    exitconfirmation = false;
+                                else
+                                    exitconfirmation = true;
+                                break;
+                            }
                         break;
+
+                        default:
+                        break;
+                    }
                 }
             }
         }
-        }
 
         // Drawing (2/2)
-        if (exitconfirmation)
+        if( exitconfirmation )
         {
             //App.draw(*effectBlur);
             guiConf->guiDraw(App);
@@ -321,11 +320,12 @@ int screenMenu::Run(sf::RenderWindow &App)
         //mguiMenu->guiDraw(App);
 
         // Notifications
+        NotificationManager.update();
         NotificationManager.draw(App);
 
         // Display
         App.display();
     }
 
-    return (-1);
+    return -1;
 }

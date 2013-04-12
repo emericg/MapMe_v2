@@ -94,9 +94,8 @@ ConfigurationManager::~ConfigurationManager()
 /* ************************************************************************** */
 
 /*!
- * \return true if everything is allright, false else.
- *
- * This function check, load and parse configuration file, then affect values.
+ * \brief This function check, load and parse configuration file, then affect values.
+ * \return true if everything is allright, otherwise false.
  */
 bool ConfigurationManager::configLoad()
 {
@@ -141,9 +140,8 @@ bool ConfigurationManager::configLoad()
 }
 
 /*!
- * \return true if everything is allright, false else.
- *
- * This function save every configuration variables into one config file.
+ * \brief This function save every configuration variables into one config file.
+ * \return true if everything is allright, otherwise false.
  */
 bool ConfigurationManager::configSave()
 {
@@ -1008,7 +1006,7 @@ bool ConfigurationManager::setDisplayAspectRatio(std::string rawaspectratio)
  * Do not return true or false, because if fullscreen mode fails it's likely not
  * because of the configuration value but because of the system's settings.
  */
-void ConfigurationManager::setFullScreen(bool fullscreen)
+void ConfigurationManager::setFullScreen(const bool fullscreen)
 {
     conf_FullScreen = fullscreen;
 }
@@ -1020,7 +1018,7 @@ void ConfigurationManager::setFullScreen(bool fullscreen)
  * Do not return true or false, because if vsync mode fails it's likely not
  * because of the configuration value but because of the system's settings.
  */
-void ConfigurationManager::setVSync(bool vSync)
+void ConfigurationManager::setVSync(const bool vSync)
 {
     conf_vSync = vSync;
 }
@@ -1041,7 +1039,7 @@ bool ConfigurationManager::setLanguage(const char *lng)
  * \param volume The volume level to set.
  * \return bool true if value is successfully applied.
  */
-bool ConfigurationManager::setVolumeMaster(unsigned int volume)
+bool ConfigurationManager::setVolumeMaster(const unsigned int volume)
 {
     if( (volume >= 0) && (volume <= 100) )
     {
@@ -1060,7 +1058,7 @@ bool ConfigurationManager::setVolumeMaster(unsigned int volume)
  * \param volume The volume to set.
  * \return bool true if value is successfully applied.
  */
-bool ConfigurationManager::setVolumeEffects(unsigned int volume)
+bool ConfigurationManager::setVolumeEffects(const unsigned int volume)
 {
     if( (volume >= 0) && (volume <= 100) )
     {
@@ -1079,7 +1077,7 @@ bool ConfigurationManager::setVolumeEffects(unsigned int volume)
  * \param volume The volume to set.
  * \return bool true if value is successfully applied.
  */
-bool ConfigurationManager::setVolumeMusic(unsigned int volume)
+bool ConfigurationManager::setVolumeMusic(const unsigned int volume)
 {
     if( (volume >= 0) && (volume <= 100) )
     {
@@ -1109,7 +1107,7 @@ bool ConfigurationManager::setUsername(const char *user)
  * \param port The port number to set.
  * \return bool true if value is successfully applied.
  */
-bool ConfigurationManager::setNetworkPort(unsigned int port)
+bool ConfigurationManager::setNetworkPort(const unsigned int port)
 {
     if( (port > 0) && (port < 65536) )
     {

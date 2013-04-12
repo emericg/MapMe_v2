@@ -105,14 +105,14 @@ public:
     bool setDisplayResolution(unsigned int width, unsigned int height);
     bool setDisplayAspectRatio(double screenapectratio);
     bool setDisplayAspectRatio(std::string rawscreenapectratio);
-    void setFullScreen(bool fullscreen);
-    void setVSync(bool vsync);
+    void setFullScreen(const bool fullscreen);
+    void setVSync(const bool vsync);
     bool setLanguage(const char *lng);
-    bool setVolumeMaster(unsigned int volume);
-    bool setVolumeEffects(unsigned int volume);
-    bool setVolumeMusic(unsigned int volume);
+    bool setVolumeMaster(const unsigned int volume);
+    bool setVolumeEffects(const unsigned int volume);
+    bool setVolumeMusic(const unsigned int volume);
     bool setUsername(const char *user);
-    bool setNetworkPort(unsigned int port);
+    bool setNetworkPort(const unsigned int port);
 
 private:
     ConfigurationManager();
